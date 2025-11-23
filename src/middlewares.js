@@ -11,11 +11,10 @@ const createThumbnail = async (req, res, next) => {
     const filePath = req.file.path;
     const fileExtension = path.extname(filePath);
     const baseName = path.basename(filePath, fileExtension);
-    const thumbnailPath = path.join('uploads', `${baseName}_thumb.png`);
+    const thumbnailPath = path.join('uploads', baseName + '_thumb.png');
 
     console.log('Creating thumbnail from:', filePath);
     
-    // Create 160x160 PNG thumbnail
     await sharp(filePath)
       .resize(160, 160, {
         fit: sharp.fit.cover,
@@ -26,9 +25,8 @@ const createThumbnail = async (req, res, next) => {
 
     console.log('Thumbnail created:', thumbnailPath);
     
-    // Add thumbnail info to request object
     req.thumbnail = {
-      filename: `${baseName}_thumb.png`,
+      filename: baseName + '_thumb.png',
       path: thumbnailPath
     };
 
