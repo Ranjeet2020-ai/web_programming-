@@ -1,0 +1,24 @@
+[
+  {
+    "media_id": 1,
+    "user_id": 1,
+    "filename": "https://picsum.photos/400/300",
+    "thumbnail": "https://picsum.photos/200/150",
+    "filesize": 1024,
+    "media_type": "image",
+    "title": "Sample Image 1",
+    "description": "This is a sample image description",
+    "created_at": "2023-11-20T10:30:00Z"
+  },
+  {
+    "media_id": 2,
+    "user_id": 2,
+    "filename": "https://picsum.photos/401/301",
+    "thumbnail": "https://picsum.photos/201/151",
+    "filesize": 2048,
+    "media_type": "image",
+    "title": "Sample Image 2",
+    "description": "Another sample image description",
+    "created_at": "2023-11-20T11:30:00Z"
+  }
+]
