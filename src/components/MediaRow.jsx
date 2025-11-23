@@ -1,6 +1,7 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 
-const MediaRow = ({ item }) => {
+const MediaRow = ({ item, setSelectedItem }) => {
   return (
     <tr>
       <td>{item.title}</td>
@@ -17,7 +18,7 @@ const MediaRow = ({ item }) => {
       </td>
       <td>{item.media_type}</td>
       <td>
-        <Link to={\`/single/\${item.media_id}\`} state={item} className="btn">
+        <Link to={`/single/${item.media_id}`} state={item} className="btn">
           View
         </Link>
       </td>
